@@ -139,6 +139,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="HashTableAVL.cpp" />
     <ClCompile Include="HashTableChaining.cpp" />
     <ClCompile Include="HashTableChaining.hpp" />
     <ClCompile Include="HastTableOpenAddressing.cpp" />
@@ -147,6 +148,7 @@
   <ItemGroup>
     <ClInclude Include="Dictionary.hpp" />
     <ClInclude Include="Element.hpp" />
+    <ClInclude Include="HashTableAVL.hpp" />
     <ClInclude Include="HashTableOpenAddressing.hpp" />
     <ClInclude Include="Timer.hpp" />
   </ItemGroup>

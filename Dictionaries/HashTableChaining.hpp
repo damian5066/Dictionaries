@@ -32,9 +32,4 @@ public:
 
     void insert(int key, int value) override;
     bool remove(int key) override;
-    bool find(int key, int& outValue) const override;
-    bool contains(int key) const override;
-    int returnSize() const override;
-    void display() const override;
-    bool isEmpty() const override;
 };

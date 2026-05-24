@@ -13,5 +13,7 @@ public:
 
     // usuniecie pary o danym kluczu, zwraca czy klucz istnial
     virtual bool remove(int key) = 0;
-
+        
+    // wyswietlenie zawartosci
+    virtual void display() const = 0;
 };

@@ -48,10 +48,13 @@ private:
     // powieksza tablice i przepisuje pary
     void rehash(int newCapacity);
 
+    void collectInOrder(AVLNode* node) const;
+
 public:
     HashTableAVL();
     ~HashTableAVL();
 
     void insert(int key, int value) override;
     bool remove(int key) override;
+    void display() const override;
 };

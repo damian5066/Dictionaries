@@ -198,6 +198,8 @@ void displayStructureMenu(const string& structureName) {
     cout << "\n" << structureName << "" << endl;
     cout << "1. Wstaw pare (insert)" << endl;
     cout << "2. Usun klucz (remove)" << endl;
+    cout << "6. Wyswietl zawartosc" << endl;
+    cout << "7. Wygeneruj losowo" << endl;
     cout << "0. Wroc do menu glownego" << endl;
     cout << "Wybor: ";
 }
@@ -230,6 +232,21 @@ void handleStructureMenu(Dictionary* dict, const string& name) {
             else {
                 cout << "Nie znaleziono klucza " << key << endl;
             }
+            break;
+        }
+        case 6: {
+            dict->display();
+            break;
+        }
+        case 7: {
+            int n;
+            cout << "Podaj liczbe par do wygenerowania (min 1): ";
+            cin >> n;
+            if (n < 1) { cout << "Zly rozmiar." << endl; break; }
+            int* keys = new int[n];
+            fillDictionaryUnique(dict, n, keys);
+            delete[] keys;
+            cout << "Wygenerowano " << n << " losowych par." << endl;
             break;
         }
         case 0:

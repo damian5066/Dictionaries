@@ -106,3 +106,14 @@ bool HashTableOpenAddressing::remove(int key) {
 
     return false;
 }
+
+void HashTableOpenAddressing::display() const {
+    cout << "Zawartosc tablicy (adresowanie otwarte):" << endl;
+    for (int i = 0; i < capacity; i++) {
+        if (table[i].state == OCCUPIED) {
+            cout << "  [" << i << "]: (" << table[i].key << "=>" << table[i].value << ")" << endl;
+        }
+    }
+    cout << "Liczba par: " << size << ", pojemnosc: " << capacity
+        << ", tombstone'ow: " << deletedCount << endl;
+}

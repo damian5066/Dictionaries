@@ -32,4 +32,5 @@ public:
 
     void insert(int key, int value) override;
     bool remove(int key) override;
+    void display() const override;
 };

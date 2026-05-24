@@ -113,3 +113,18 @@ bool HashTableChaining::remove(int key) {
     return false; // nie znaleziono
 }
 
+void HashTableChaining::display() const {
+    cout << "Zawartosc tablicy (metoda lancuchowa):" << endl;
+    for (int i = 0; i < capacity; i++) {
+        if (buckets[i] != nullptr) {
+            cout << "  [" << i << "]: ";
+            Node* current = buckets[i];
+            while (current != nullptr) {
+                cout << "(" << current->key << "=>" << current->value << ") ";
+                current = current->next;
+            }
+            cout << endl;
+        }
+    }
+    cout << "Liczba par: " << size << ", pojemnosc: " << capacity << endl;
+}

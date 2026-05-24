@@ -237,3 +237,22 @@ bool HashTableAVL::remove(int key) {
     if (removed) size--;
     return removed;
 }
+
+void HashTableAVL::collectInOrder(AVLNode* node) const {
+    if (node == nullptr) return;
+    collectInOrder(node->left);
+    cout << "(" << node->key << "=>" << node->value << ") ";
+    collectInOrder(node->right);
+}
+
+void HashTableAVL::display() const {
+    cout << "Zawartosc tablicy (kubelki z drzewem AVL):" << endl;
+    for (int i = 0; i < capacity; i++) {
+        if (buckets[i] != nullptr) {
+            cout << "  [" << i << "]: ";
+            collectInOrder(buckets[i]); // posortowane po kluczu
+            cout << endl;
+        }
+    }
+    cout << "Liczba par: " << size << ", pojemnosc: " << capacity << endl;
+}

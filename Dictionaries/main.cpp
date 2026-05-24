@@ -19,10 +19,10 @@ const int NUM_REPS = 100;
 
 // usrednione wyniki dla jednej struktury i jednego rozmiaru
 struct BenchmarkResult {
-    string structureName;
+    string structureName; 
     int size;
-    long long insert_ns;   // sredni czas insert
-    long long remove_ns;   // sredni czas remove
+    long long insert_ns;   // sredni czas operacji insert
+    long long remove_ns;   // sredni czas operacji remove
 };
 
 // losowy klucz - zakres kilkukrotnie większy niz rozmiar 

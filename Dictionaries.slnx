@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Dictionaries/Dictionaries.vcxproj" />
+  <Project Path="Dictionaries/Dictionaries.vcxproj" Id="9663a62f-b91f-4d27-9814-14057cb7adee" />
 </Solution>
